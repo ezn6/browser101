@@ -8,19 +8,30 @@
     <style>
       body {
         background-color: gray;
+        /* overflow: hidden; 스크롤이 안되게 하려면*/
       }
+
       div {
         background-color: lemonchiffon;
-        width: 100px;
-        height: 100px;
+        width: 300px;
+        height: 300px;
         margin: 10px;
       }
       .special {
         background-color: orange;
       }
+      aside {
+        position: fixed;
+        right: 10px;
+      }
     </style>
   </head>
   <body>
+    <aside>
+      <button id="one">Scroll by 100px(y)</button>
+      <button id="two">Scroll to 100px(y)</button>
+      <button id="three">Scroll into special</button>
+    </aside>
     <div></div>
     <div></div>
     <div></div>
@@ -41,6 +52,29 @@
         console.log(`screen Y : ${event.screenY}`);
         console.log(`client X : ${event.clientX}`);
         console.log(`client Y : ${event.clientY}`);
+        console.log(`page X : ${event.pageX}`);
+        console.log(`page Y : ${event.pageY}`);
+      });
+
+      const btn1 = document.querySelector('#one');
+      const btn2 = document.querySelector('#two');
+      const btn3 = document.querySelector('#three');
+      btn1.addEventListener('click', () => {
+        // window.scrollBy(0, 100);
+        window.scrollBy({
+          top: 100,
+          behavior: 'smooth',
+        });
+      });
+      btn2.addEventListener('click', () => {
+        // window.scrollTo(0, 100);
+        window.scroll({
+          top: 100,
+          behavior: 'smooth',
+        });
+      });
+      btn3.addEventListener('click', () => {
+        special.scrollIntoView({ behavior: 'smooth' });
       });
     </script>
   </body>
