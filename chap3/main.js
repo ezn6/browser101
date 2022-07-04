@@ -1,19 +1,16 @@
-const box = document.querySelector('.box');
-const pageX = document.getElementById('x');
-const pageY = document.getElementById('y');
-const line = document.querySelector('.line1');
-const line2 = document.querySelector('.line2');
+const vertical = document.querySelector('.vertical');
+const horizontal = document.querySelector('.horizontal');
+const target = document.querySelector('.target');
+const tag = document.querySelector('.tag');
 
-document.addEventListener('mousemove', function (e) {
-  const coordinate = document.querySelector('.coordinate');
-  pageX.innerText = e.pageX;
-  pageY.innerText = e.pageY;
-  coordinate.style.left = e.pageX - 50 + 'px';
-  coordinate.style.top = e.pageY - 50 + 'px';
-  box.style.left = e.pageX + 'px';
-  box.style.top = e.pageY + 'px';
-  line.style.right = window.innerWidth - e.pageX + 'px';
-  line.style.bottom = window.innerHeight - e.pageY + 'px';
-  line2.style.left = e.pageX + 'px';
-  line2.style.top = e.pageY + 'px';
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  tag.innerHTML = `${x}px, ${y}px`;
+  tag.style.left = `${x}px`;
+  tag.style.top = `${y}px`;
+  vertical.style.left = `${x}px`;
+  horizontal.style.top = `${y}px`;
+  target.style.left = `${x}px`;
+  target.style.top = `${y}px`;
 });
