@@ -14,29 +14,32 @@ body {
 }
 
 .vertical {
-  left: 50%;
+  /* left: 50%; */
   width: 1px;
   height: 100%;
 }
 
 .horizontal {
-  top: 50%;
+  /* top: 50%; */
   width: 100%;
   height: 1px;
 }
 
+.div {
+  position: relative;
+}
 .target {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  /* top: 50%;
+  left: 50%; */
   transform: translate(-50%, -50%);
 }
 
 .tag {
   color: white;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  /* top: 50%;
+  left: 50%; */
   padding-left: 30px;
   padding-top: 30px;
 }
