@@ -47,9 +47,8 @@ button {
   white-space: nowrap;
 }
 .item {
-  /* border: 2px solid red; */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding: 10px 20px;
   font-size: 1.2rem;
 }
@@ -61,6 +60,24 @@ button {
   color: #f37878;
   transition: all 200ms ease-in-out;
   transform: rotate(10deg);
+}
+
+.item-name {
+  display: inline-block;
+  width: 250px;
+}
+
+.item-update {
+  display: none;
+  margin-top: 10px;
+}
+.item-update input {
+  width: 240px;
+  height: 30px;
+  border: 1px solid blanchedalmond;
+  background-color: azure;
+  border-radius: 4px;
+  margin-right: 40px;
 }
 
 form {
