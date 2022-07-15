@@ -25,10 +25,12 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 10px 5px 5px gainsboro;
 }
 
 .title {
   font-size: 2rem;
+  font-weight: 800;
   color: #f37878;
   padding-top: 20px;
 }
@@ -37,10 +39,12 @@ button {
   background-color: #e6fbd9;
   height: 350px;
   width: 100%;
-  margin-top: 2em;
+  margin-top: 20px;
   padding: 40px;
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  white-space: nowrap;
 }
 .item {
   /* border: 2px solid red; */
@@ -50,7 +54,7 @@ button {
   font-size: 1.2rem;
 }
 .item button {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .item button :hover {
